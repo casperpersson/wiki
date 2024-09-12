@@ -7,8 +7,8 @@
   "dev": true,
   "scripts": {
     "start": "node server",
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider node dev",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --profile --config dev/webpack/webpack.prod.js",
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider node dev",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --profile --config dev/webpack/webpack.prod.js",
     "watch": "NODE_OPTIONS=--openssl-legacy-provider webpack --config dev/webpack/webpack.dev.js",
     "test": "eslint --format codeframe --ext .js,.vue . && pug-lint server/views && jest",
     "cypress:open": "cypress open",
@@ -66,6 +66,7 @@
     "connect-session-knex": "2.0.0",
     "cookie-parser": "1.4.6",
     "cors": "2.8.5",
+    "cross-env": "7.0.3",
     "cuint": "0.2.2",
     "custom-error-instance": "2.1.2",
     "dependency-graph": "0.11.0",
