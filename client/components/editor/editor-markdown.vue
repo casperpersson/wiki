@@ -215,6 +215,7 @@ import underline from '../../libs/markdown-it-underline'
 import 'katex/dist/contrib/mhchem'
 import twemoji from 'twemoji'
 import plantuml from './markdown/plantuml'
+import mdmdi from 'markdown-it-mdi'
 
 // Prism (Syntax Highlighting)
 import Prism from 'prismjs'
@@ -276,6 +277,7 @@ const md = new MarkdownIt({
   .use(mdMark)
   .use(mdFootnote)
   .use(mdImsize)
+  .use(mdmdi)
 
 // DOMPurify fix for draw.io
 DOMPurify.addHook('uponSanitizeElement', (elm) => {
