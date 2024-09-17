@@ -50,3 +50,6 @@ test-results/
 
 #internal guides
 /guides
+server/daemon/oriwiki2.exe
+server/daemon/oriwiki2.exe.config
+server/daemon/oriwiki2.xml

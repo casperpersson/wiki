@@ -961,7 +961,8 @@ module.exports = class Page extends Model {
           await WIKI.models.pages.savePageToCache(page)
         } else {
           // -> No render? Last page render failed...
-          throw new Error('Page has no rendered version. Looks like the Last page render failed. Try to edit the page and save it again.')
+          await WIKI.models.pages.renderPage(page);
+          page = await WIKI.models.pages.getPageFromDb(opts);
         }
       }
     }
