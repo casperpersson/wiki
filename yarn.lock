@@ -13649,6 +13649,13 @@ markdown-it-mathjax@2.0.0:
   resolved "https://registry.npmjs.org/markdown-it-mathjax/-/markdown-it-mathjax-2.0.0.tgz"
   integrity sha1-ritPTFxxmgP55HXGZPeyaFIx2ek=
 
+markdown-it-mdi@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/markdown-it-mdi/-/markdown-it-mdi-0.1.0.tgz"
+  integrity sha512-2AUhSc/SuuqZLiF4zbGd5MhyR1eyX7fSaOydMzOqmLtSMziCP9LY+JlJm6VSjrz3vg55BD5U5fy9GjoKoUUxUg==
+  dependencies:
+    markdown-it-regexp "^0.4.0"
+
 markdown-it-multimd-table@4.0.3:
   version "4.0.3"
   resolved "https://registry.npmjs.org/markdown-it-multimd-table/-/markdown-it-multimd-table-4.0.3.tgz"
@@ -13664,6 +13671,11 @@ markdown-it-pivot-table@1.0.5:
     group-by "^0.0.1"
     nd-table "^1.2.2"
     string-math "^1.2.2"
+
+markdown-it-regexp@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.npmjs.org/markdown-it-regexp/-/markdown-it-regexp-0.4.0.tgz"
+  integrity sha512-0XQmr46K/rMKnI93Y3CLXsHj4jIioRETTAiVnJnjrZCEkGaDOmUxTbZj/aZ17G5NlRcVpWBYjqpwSlQ9lj+Kxw==
 
 markdown-it-sub@1.0.0:
   version "1.0.0"
