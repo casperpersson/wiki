@@ -130,17 +130,29 @@ module.exports = {
     // --------------------------------
 
     const pastLinks = await this.page.$relatedQuery('links')
-
+      // improved pagelinks
     if (internalRefs.length > 0) {
       // -> Find matching pages
-      const results = await WIKI.models.pages.query().column('id', 'path', 'localeCode').where(builder => {
+      const hashset = [];
+      const results = await WIKI.models.pages.query().column('id', 'path', 'localeCode','hash').where(builder => {
+
         internalRefs.forEach((ref, idx) => {
-          if (idx < 1) {
-            builder.where(ref)
-          } else {
-            builder.orWhere(ref)
+          var crypto = require('crypto');
+          var shasum = crypto.createHash('sha1');
+          shasum.update(ref.localeCode+'|'+ref.path+'|');
+
+          hashref = shasum.digest('hex');
+          if (hashset.includes(hashref) == false){
+            hashset.push(hashref);
           }
+          // old code
+          /*if (idx < 1) {
+            builder.whereIn(hash)
+          } else {
+            builder.orWhere(hash)
+          }*/
         })
+        builder.whereIn('hash',hashset)
       })
 
       // -> Apply tag to internal links for found pages
