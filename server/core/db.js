@@ -34,7 +34,7 @@ module.exports = {
       user: WIKI.config.db.user.toString(),
       password: WIKI.config.db.pass.toString(),
       database: WIKI.config.db.db.toString(),
-      port: WIKI.config.db.port
+      port: WIKI.config.db.port,
     }
 
     // Handle SSL Options

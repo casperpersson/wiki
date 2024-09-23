@@ -485,6 +485,9 @@ module.exports = class Page extends Model {
     // -> Get latest updatedAt
     page.updatedAt = await WIKI.models.pages.query().findById(page.id).select('updatedAt').then(r => r.updatedAt)
 
+     // -> Rebuild page tree
+     await WIKI.models.pages.rebuildTree()
+
     return page
   }
 
