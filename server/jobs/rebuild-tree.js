@@ -1,14 +1,9 @@
 const _ = require('lodash')
 const sql = require('mssql')
-// const config = require('../core/config')
-// const dbConfig = require('../core/db')
 /* global WIKI */
 
 module.exports = async (pageId) => {
   WIKI.logger.info(`Rebuilding page tree...`)
-  // WIKI.models = require('../core/db').init()
-  // await WIKI.configSvc.loadFromDb()
-  // await WIKI.configSvc.applyFlags()
   let dbConfig = (!_.isEmpty(process.env.DATABASE_URL)) ? process.env.DATABASE_URL : {
     host: WIKI.config.db.host.toString(),
     user: WIKI.config.db.user.toString(),
