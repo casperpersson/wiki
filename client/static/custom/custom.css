@@ -386,7 +386,56 @@ code[class*="language-css"] {
 .progressbar-l-fill-yellow	{height: 38px; padding:0px; margin:0px; background-color:#ffb74d; border: 1px solid #fff3e0; border-radius:4px;				}
 .progressbar-l-back-red		{height: 40px; padding:0px; margin:0px; background-color:#ffebee; border: 1px solid #e57373; border-radius:4px; width: 100%; }
 .progressbar-l-fill-red		{height: 38px; padding:0px; margin:0px; background-color:#e57373; border: 1px solid #ffebee; border-radius:4px;				}
+@keyframes progressbarrun {from {width: 0px;}}
 
+
+.progressbar-back-grey		{float:left; padding:0px; margin:0px; background-color:#eceff1; border: 1px solid #607d8b; border-radius:2px; width: 100%; }
+.progressbar-fill-grey		{float:left; padding:0px; margin:0px; background-color:#607d8b; border: 1px solid #eceff1; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.progressbar-back-blue		{float:left; padding:0px; margin:0px; background-color:#e3f2fd; border: 1px solid #64b5f6; border-radius:2px; width: 100%; }
+.progressbar-fill-blue		{float:left; padding:0px; margin:0px; background-color:#64b5f6; border: 1px solid #e3f2fd; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.progressbar-back-green		{float:left; padding:0px; margin:0px; background-color:#e8f5e9; border: 1px solid #81c784; border-radius:2px; width: 100%; }
+.progressbar-fill-green		{float:left; padding:0px; margin:0px; background-color:#81c784; border: 1px solid #e8f5e9; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.progressbar-back-yellow	{float:left; padding:0px; margin:0px; background-color:#fff3e0; border: 1px solid #ffb74d; border-radius:2px; width: 100%; }
+.progressbar-fill-yellow	{float:left; padding:0px; margin:0px; background-color:#ffb74d; border: 1px solid #fff3e0; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.progressbar-back-red		{float:left; padding:0px; margin:0px; background-color:#ffebee; border: 1px solid #e57373; border-radius:2px; width: 100%; }
+.progressbar-fill-red		{float:left; padding:0px; margin:0px; background-color:#e57373; border: 1px solid #ffebee; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.progressbar-back-purple	{float:left; padding:0px; margin:0px; background-color:#f7ebff; border: 1px solid #d173e5; border-radius:2px; width: 100%; }
+.progressbar-fill-purple	{float:left; padding:0px; margin:0px; background-color:#d173e5; border: 1px solid #f7ebff; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+
+.v-main .contents blockquote.is-disk {
+	padding-left: 0 1rem 0;
+    background-color: #f9f9f9;
+	border-top:1px solid #d0d0d0;
+	border-left:55px solid #d0d0d0;
+	border-right:1px solid #d0d0d0;
+	border-bottom:1px solid #d0d0d0;
+	border-radius:.5rem;
+	margin:1rem 0;
+	position:relative;
+}
+
+.v-main .contents blockquote.is-disk:before {
+    content:"\F02CA";
+	color: white;
+}
+
+.v-main .contents blockquote.is-disk code:not([class^=language-]) {
+    background-color: black;
+    color: green;
+}
+
+.theme--dark .v-main .contents blockquote.is-disk {
+    background-color: #263238;
+    color: gray;
+    border-color: #1e1e1e;
+	border-left:55px solid #464646;
+    box-shadow: 0 0 2px 0 white;
+}
+
+.theme--dark .v-main .contents blockquote.is-disk:before {
+    content:"\F02CA";
+	color: white;
+}
 
 
 
