@@ -49,7 +49,7 @@ test-results/
 /server/locales/**/*.yml
 
 #internal guides
-/guides
-server/daemon/oriwiki2.exe
-server/daemon/oriwiki2.exe.config
-server/daemon/oriwiki2.xml
+/Guides
+/server/daemon/oriwiki2.exe
+/server/daemon/oriwiki2.exe.config
+/server/daemon/oriwiki2.xml
