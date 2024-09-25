@@ -814,6 +814,9 @@
       .token.punctuation {
         color: #393a34;
       }
+      .token.test1234 {
+        color: #fc14ff;
+      }
       .token.boolean,
       .token.constant,
       .token.inserted,
@@ -1512,8 +1515,202 @@
       color: mc('pink', '500');
     }
   }
-
 }
+
+/*Casper herfra og ned*/
+
+@keyframes progressbarrun {from {width: 0px;}}
+/* bars */
+.progressbar-back-grey		{float:left; padding:0px; margin:0 0 5px 0; background-color:#eceff1; border: 1px solid #607d8b; border-radius:2px; width: 100%; }
+.progressbar-fill-grey		{float:left; padding:0px; margin:0px; background-color:#607d8b; border: 1px solid #eceff1; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.progressbar-back-blue		{float:left; padding:0px; margin:0 0 5px 0; background-color:#e3f2fd; border: 1px solid #64b5f6; border-radius:2px; width: 100%; }
+.progressbar-fill-blue		{float:left; padding:0px; margin:0px; background-color:#64b5f6; border: 1px solid #e3f2fd; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.progressbar-back-green		{float:left; padding:0px; margin:0 0 5px 0; background-color:#e8f5e9; border: 1px solid #81c784; border-radius:2px; width: 100%; }
+.progressbar-fill-green		{float:left; padding:0px; margin:0px; background-color:#81c784; border: 1px solid #e8f5e9; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.progressbar-back-yellow	{float:left; padding:0px; margin:0 0 5px 0; background-color:#fff3e0; border: 1px solid #ffb74d; border-radius:2px; width: 100%; }
+.progressbar-fill-yellow	{float:left; padding:0px; margin:0px; background-color:#ffb74d; border: 1px solid #fff3e0; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.progressbar-back-red		{float:left; padding:0px; margin:0 0 5px 0; background-color:#ffebee; border: 1px solid #e57373; border-radius:2px; width: 100%; }
+.progressbar-fill-red		{float:left; padding:0px; margin:0px; background-color:#e57373; border: 1px solid #ffebee; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.progressbar-back-purple	{float:left; padding:0px; margin:0 0 5px 0; background-color:#f7ebff; border: 1px solid #d173e5; border-radius:2px; width: 100%; }
+.progressbar-fill-purple	{float:left; padding:0px; margin:0px; background-color:#d173e5; border: 1px solid #f7ebff; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+
+
+.theme--dark .progressbar-back-grey		{float:left; padding:0px; margin:0 0 5px 0; background-color:#2f2f2f; border: 1px solid #607d8b; border-radius:2px; width: 100%; }
+.theme--dark .progressbar-fill-grey		{float:left; padding:0px; margin:0px; background-color:#607d8b; border: 1px solid #2f2f2f; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.theme--dark .progressbar-back-blue		{float:left; padding:0px; margin:0 0 5px 0; background-color:#00355c; border: 1px solid #64b5f6; border-radius:2px; width: 100%; }
+.theme--dark .progressbar-fill-blue		{float:left; padding:0px; margin:0px; background-color:#64b5f6; border: 1px solid #00355c; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.theme--dark .progressbar-back-green	{float:left; padding:0px; margin:0 0 5px 0; background-color:#005c08; border: 1px solid #81c784; border-radius:2px; width: 100%; }
+.theme--dark .progressbar-fill-green	{float:left; padding:0px; margin:0px; background-color:#81c784; border: 1px solid #005c08; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.theme--dark .progressbar-back-yellow	{float:left; padding:0px; margin:0 0 5px 0; background-color:#585c00; border: 1px solid #ffb74d; border-radius:2px; width: 100%; }
+.theme--dark .progressbar-fill-yellow	{float:left; padding:0px; margin:0px; background-color:#ffb74d; border: 1px solid #585c00; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.theme--dark .progressbar-back-red		{float:left; padding:0px; margin:0 0 5px 0; background-color:#911010; border: 1px solid #e57373; border-radius:2px; width: 100%; }
+.theme--dark .progressbar-fill-red		{float:left; padding:0px; margin:0px; background-color:#e57373; border: 1px solid #911010; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+.theme--dark .progressbar-back-purple	{float:left; padding:0px; margin:0 0 5px 0; background-color:#55005c; border: 1px solid #d173e5; border-radius:2px; width: 100%; }
+.theme--dark .progressbar-fill-purple	{float:left; padding:0px; margin:0px; background-color:#d173e5; border: 1px solid #55005c; border-radius:2px; height:100%; animation: progressbarrun 1s; animation-fill-mode: forwards; animation-timing-function: ease; }
+
+.v-main .contents blockquote.is-disk {
+	padding-left: 0 1rem 0;
+    background-color: #f9f9f9;
+	border-top:1px solid #7b7b7b;
+	border-left:55px solid #7b7b7b;
+	border-right:1px solid #7b7b7b;
+	border-bottom:1px solid #7b7b7b;
+	border-radius:.5rem;
+	margin:1rem 0;
+	position:relative;
+}
+
+.v-main .contents blockquote.is-disk:before {
+    content:"\F02CA";
+	color: #e7e7e7;
+}
+
+.v-main .contents blockquote.is-disk code:not([class^=language-]) {
+    background-color: black;
+    color: green;
+}
+
+.theme--dark .v-main .contents blockquote.is-disk {
+    background-color: #263238;
+    color: white;
+    border-color: #1e1e1e;
+	border-left:55px solid #464646;
+    box-shadow: 0 0 2px 0 white;
+}
+
+.theme--dark .v-main .contents blockquote.is-disk:before {
+    content:"\F02CA";
+	color: white;
+}
+
+.v-main .contents blockquote.is-floppy {
+	padding-left: 0 1rem 0;
+    background-color: #f9f9f9;
+	border-left:55px solid #7b7b7b;
+	border-radius:.5rem;
+	margin:1rem 0;
+	position:relative;
+}
+
+.v-main .contents blockquote.is-floppy:before {
+    content:"\F0249";
+	color: #e7e7e7;
+}
+
+.v-main .contents blockquote.is-floppy code:not([class^=language-]) {
+    background-color: black;
+    color: green;
+}
+
+.theme--dark .v-main .contents blockquote.is-floppy {
+    background-color: #263238;
+    color: white;
+    border-color: #1e1e1e;
+	border-left:55px solid #464646;
+    box-shadow: 0 0 2px 0 white;
+}
+
+.theme--dark .v-main .contents blockquote.is-floppy:before {
+    content:"\F0249";
+	color: white;
+}
+
+.v-main .contents blockquote.is-cdrom {
+	padding-left: 0 1rem 0;
+    background-color: #f9f9f9;
+	border-left:55px solid #7b7b7b;
+	border-radius:.5rem;
+	margin:1rem 0;
+	position:relative;
+}
+
+.v-main .contents blockquote.is-cdrom:before {
+    content:"\F05EE";
+	color: #e7e7e7;
+}
+
+.v-main .contents blockquote.is-cdrom code:not([class^=language-]) {
+    background-color: black;
+    color: green;
+}
+
+.theme--dark .v-main .contents blockquote.is-cdrom {
+    background-color: #263238;
+    color: white;
+    border-color: #1e1e1e;
+	border-left:55px solid #464646;
+    box-shadow: 0 0 2px 0 white;
+}
+
+.theme--dark .v-main .contents blockquote.is-cdrom:before {
+    content:"\F05EE";
+	color: white;
+}
+
+.v-main .contents blockquote.is-mappedfolder {
+	padding-left: 0 1rem 0;
+    background-color: #f9f9f9;
+	border-left:55px solid #7b7b7b;
+	border-radius:.5rem;
+	margin:1rem 0;
+	position:relative;
+}
+
+.v-main .contents blockquote.is-mappedfolder:before {
+    content:"\F0870";
+	color: #e7e7e7;
+}
+
+.v-main .contents blockquote.is-mappedfolder code:not([class^=language-]) {
+    background-color: black;
+    color: green;
+}
+
+.theme--dark .v-main .contents blockquote.is-mappedfolder {
+    background-color: #263238;
+    color: white;
+    border-color: #1e1e1e;
+	border-left:55px solid #464646;
+    box-shadow: 0 0 2px 0 white;
+}
+
+.theme--dark .v-main .contents blockquote.is-mappedfolder:before {
+    content:"\F0870";
+	color: white;
+}
+
+.v-main .contents blockquote.is-memorydisk {
+	padding-left: 0 1rem 0;
+    background-color: #f9f9f9;
+	border-left:55px solid #7b7b7b;
+	border-radius:.5rem;
+	margin:1rem 0;
+	position:relative;
+}
+
+.v-main .contents blockquote.is-memorydisk:before {
+    content:"\F035B";
+	color: #e7e7e7;
+}
+
+.v-main .contents blockquote.is-memorydisk code:not([class^=language-]) {
+    background-color: black;
+    color: green;
+}
+
+.theme--dark .v-main .contents blockquote.is-memorydisk {
+    background-color: #263238;
+    color: white;
+    border-color: #1e1e1e;
+	border-left:55px solid #464646;
+    box-shadow: 0 0 2px 0 white;
+}
+
+.theme--dark .v-main .contents blockquote.is-memorydisk:before {
+    content:"\F035B";
+	color: white;
+}
+
 
 // ---------------------------------
 // COMMENTS

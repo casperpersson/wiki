@@ -23,6 +23,7 @@ module.exports = async (pageId) => {
       .execute('ext.rebuild_page_tree');
 
     // Return the result
+    WIKI.logger.info(`Rebuilding page tree: [ COMPLETED ]`)
     return result.recordset;
   } catch (err) {
     WIKI.logger.error(`Rebuilding page tree: [ FAILED ]`)
