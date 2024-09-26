@@ -720,7 +720,7 @@
     color: mc('indigo', '800');
     font-family: 'Roboto Mono', monospace;
     font-weight: normal;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     box-shadow: none;
     text-shadow: none;
 
@@ -735,7 +735,7 @@
   }
 
   .prismjs{
-    border: none;
+    border: 1px solid lightgray;
     border-radius: 5px;
     box-shadow: initial;
     background-color: white;
@@ -815,7 +815,7 @@
       .token.punctuation {
         color: #393a34;
       }
-      .token.test1234 {
+      .token.function {
         color: #fc14ff;
       }
       .token.boolean,
@@ -836,8 +836,8 @@
       code[class*="language-css"] {
         color: #00f;
       }
-      .token.function {
-        color: #393a34;
+      .token.type {
+        color: #00f;
       }
       .language-autohotkey .token.tag,
       .token.deleted {
