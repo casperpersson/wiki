@@ -61,6 +61,7 @@ module.exports = class Comment extends Model {
    * Post New Comment
    */
   static async postNewComment ({ pageId, replyTo, content, guestName, guestEmail, user, ip }) {
+
     // -> Input validation
     if (user.id === 2) {
       const validation = validate({
@@ -108,6 +109,21 @@ module.exports = class Comment extends Model {
       throw new WIKI.Error.PageNotFound()
     }
 
+    await WIKI.mail.send({
+      template: 'comment',
+      to: page.authorEmail,
+      subject: `A comment on your page has been added `+` `+`"`+page.title+`"`,
+      data: {
+        preheadertext: `IMPORTANT`,
+        title:  `A comment on your page has been added `+` `+`"`+page.title+`"`,
+        content: user.name + ` Wrote: ` +`"`+content+`".  for faster communication you can contact :  `+` `+ user.email,
+        buttonLink: WIKI.config.host+page.path,
+        buttonText: 'Go to page',
+
+      },
+      text: `Well done, you found this text, report your find and nothing will happen `
+    })
+
     // -> Process by comment provider
     return WIKI.data.commentProvider.create({
       page,
@@ -145,6 +161,20 @@ module.exports = class Comment extends Model {
     } else {
       throw new WIKI.Error.PageNotFound()
     }
+    await WIKI.mail.send({
+      template: 'comment',
+      to: page.authorEmail,
+      subject: `A comment on your page has been edited `+` `+`"`+page.title+`"`,
+      data: {
+        preheadertext: `IMPORTANT`,
+        title:  `A comment on your page has been edited `+` `+`"`+page.title+`"`,
+        content: user.name + ` Wrote: ` +`"`+content+`".  for faster communication you can contact :  `+` `+ user.email,
+        buttonLink: WIKI.config.host+page.path,
+        buttonText: 'Go to page',
+
+      },
+      text: `Well done, you found this text, report your find and nothing will happen `
+    })
 
     // -> Process by comment provider
     return WIKI.data.commentProvider.update({
@@ -156,6 +186,7 @@ module.exports = class Comment extends Model {
         ip
       }
     })
+
   }
 
   /**

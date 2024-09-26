@@ -131,6 +131,23 @@ module.exports = {
     })
     return renderedContent
   },
+  async remove ({ id, page, Comment, content,authorId, user,config}) {
+    await WIKI.mail.send({
+      template: 'comment',
+      to: page.authorEmail,
+      subject: `Comment deleted`,
+      data: {
+        preheadertext: `IMPORTANT`,
+        title:  user.name + `Deleted comment from` + page.title,
+        content: `You recieved this message because you are the author of ` + page.title,
+        buttonLink: WIKI.config.host+`/`+page.path,
+        buttonText: 'Go to page',
+
+      },
+      text: `Well done, you found this text, report your find and nothing will happen`
+    })
+    return WIKI.models.comments.query().findById(id).delete()
+  },
   /**
    * Delete an existing comment by ID
    */
