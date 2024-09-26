@@ -720,7 +720,7 @@
     color: mc('indigo', '800');
     font-family: 'Roboto Mono', monospace;
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 0.8rem;
     box-shadow: none;
     text-shadow: none;
 
@@ -735,6 +735,7 @@
   }
 
   .prismjs{
+    border: none;
     border-radius: 5px;
     box-shadow: initial;
     background-color: white;
@@ -769,7 +770,7 @@
         border: #000;
       }
       pre > code[class*="language-"] {
-        font-size: 1em;
+        font-size: 0.8em;
       }
       code[class*="language-"] ::-moz-selection,
       code[class*="language-"]::-moz-selection,
