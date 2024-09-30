@@ -2,7 +2,6 @@ const md = require('markdown-it')
 const mdAttrs = require('markdown-it-attrs')
 const mdDecorate = require('markdown-it-decorate')
 const _ = require('lodash')
-const mdWikilinks = require('markdown-it-wikilinks')
 const underline = require('./underline')
 const mdmdi = require('markdown-it-mdi')
 
@@ -37,10 +36,6 @@ module.exports = {
         }
       }
     })
-
-    mkdown.use(mdWikilinks({
-      uriSuffix: ''
-    }))
 
     if (this.config.underline) {
       mkdown.use(underline)
